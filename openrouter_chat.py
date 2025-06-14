@@ -29,8 +29,7 @@ import os
 # Configuration
 load_dotenv(override=True)  # This will override existing environment variables
 # load_dotenv()  # Load environment variables from .env file
-API_KEY = os.environ.get("
-")  # Get API key from environment variable, returns None if not found
+API_KEY = os.environ.get("OPENROUTER_API_KEY")  # Get API key from environment variable, returns None if not found
 if not API_KEY:
     raise ValueError("OPENROUTER_API_KEY environment variable is not set")
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
